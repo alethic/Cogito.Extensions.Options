@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using Autofac;
 
@@ -35,6 +36,18 @@ namespace Cogito.Extensions.Options.Tests.Configuration.Autofac
             public string Foo { get; set; }
 
             public int Bar { get; set; }
+
+        }
+
+        [RegisterAs(typeof(TestOptionsUser))]
+        class TestOptionsUser
+        {
+
+            public TestOptionsUser(IOptions<TestOptions> o)
+            {
+                if (o is null)
+                    throw new ArgumentNullException(nameof(o));
+            }
 
         }
 
@@ -96,6 +109,8 @@ namespace Cogito.Extensions.Options.Tests.Configuration.Autofac
             var s = c.Resolve<IOptionsSnapshot<TestOptions2>>();
             s.Value.Foo.Should().Be("FooValue");
             s.Value.Bar.Should().Be(123);
+
+            var u = c.Resolve<TestOptionsUser>();
         }
 
     }
