@@ -1,23 +1,37 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28803.156
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2061DAAE-9ACC-4D7E-B3C0-6C162D5EC63A}"
 	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
 		appveyor.yml = appveyor.yml
+		Cogito.Extensions.Options.dist.msbuildproj = Cogito.Extensions.Options.dist.msbuildproj
+		.github\workflows\Cogito.Extensions.Options.yml = .github\workflows\Cogito.Extensions.Options.yml
 		Directory.Build.props = Directory.Build.props
+		GitVersion.yml = GitVersion.yml
+		global.json = global.json
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cogito.Extensions.Options", "Cogito.Extensions.Options\Cogito.Extensions.Options.csproj", "{3806C20E-5184-4E42-857A-F557CC454EAE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4766AB6E-71A7-4398-8D1F-AAA951834001}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cogito.Extensions.Options.Autofac", "Cogito.Extensions.Options.Autofac\Cogito.Extensions.Options.Autofac.csproj", "{72F92675-5C02-40BD-805A-655309010A76}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dist", "dist", "{E6E9F39A-3C64-43A5-82D3-68B12E1CF0EC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cogito.Extensions.Options.Tests", "Cogito.Extensions.Options.Tests\Cogito.Extensions.Options.Tests.csproj", "{58DB4E40-2C52-4C5B-A5AB-E362BA5AEE76}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cogito.Extensions.Options", "src\Cogito.Extensions.Options\Cogito.Extensions.Options.csproj", "{B2C6D421-8CA2-4138-A5E9-C34FD29CCE44}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cogito.Extensions.Options.Configuration", "Cogito.Extensions.Options.Configuration\Cogito.Extensions.Options.Configuration.csproj", "{54DFCD13-70C9-46C5-945E-4B5A19F7569E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cogito.Extensions.Options.Autofac", "src\Cogito.Extensions.Options.Autofac\Cogito.Extensions.Options.Autofac.csproj", "{1B500A06-EEFA-4CEC-A33A-A498B4520BDD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cogito.Extensions.Options.Configuration.Autofac", "Cogito.Extensions.Options.Configuration.Autofac\Cogito.Extensions.Options.Configuration.Autofac.csproj", "{B89549F6-57B9-439F-BF00-902AFC0AE904}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cogito.Extensions.Options.Configuration", "src\Cogito.Extensions.Options.Configuration\Cogito.Extensions.Options.Configuration.csproj", "{DEC946F1-1B67-4EB3-9897-01EAD6E326A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cogito.Extensions.Options.Configuration.Autofac", "src\Cogito.Extensions.Options.Configuration.Autofac\Cogito.Extensions.Options.Configuration.Autofac.csproj", "{EB9C7AFD-EFA1-4756-BE33-38A5211A51C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cogito.Extensions.Options.Tests", "src\Cogito.Extensions.Options.Tests\Cogito.Extensions.Options.Tests.csproj", "{3DFE1E3B-0C8E-486A-BCC5-FA3D65404C79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dist-nuget", "src\dist-nuget\dist-nuget.csproj", "{499D646C-B43B-46A3-8485-F43A75865571}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dist-tests", "src\dist-tests\dist-tests.csproj", "{28032FA7-0F45-433C-87C5-67EEDC5D223B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,29 +39,46 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3806C20E-5184-4E42-857A-F557CC454EAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3806C20E-5184-4E42-857A-F557CC454EAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3806C20E-5184-4E42-857A-F557CC454EAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3806C20E-5184-4E42-857A-F557CC454EAE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{72F92675-5C02-40BD-805A-655309010A76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{72F92675-5C02-40BD-805A-655309010A76}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{72F92675-5C02-40BD-805A-655309010A76}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{72F92675-5C02-40BD-805A-655309010A76}.Release|Any CPU.Build.0 = Release|Any CPU
-		{58DB4E40-2C52-4C5B-A5AB-E362BA5AEE76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{58DB4E40-2C52-4C5B-A5AB-E362BA5AEE76}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{58DB4E40-2C52-4C5B-A5AB-E362BA5AEE76}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{58DB4E40-2C52-4C5B-A5AB-E362BA5AEE76}.Release|Any CPU.Build.0 = Release|Any CPU
-		{54DFCD13-70C9-46C5-945E-4B5A19F7569E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{54DFCD13-70C9-46C5-945E-4B5A19F7569E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{54DFCD13-70C9-46C5-945E-4B5A19F7569E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{54DFCD13-70C9-46C5-945E-4B5A19F7569E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B89549F6-57B9-439F-BF00-902AFC0AE904}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B89549F6-57B9-439F-BF00-902AFC0AE904}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B89549F6-57B9-439F-BF00-902AFC0AE904}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B89549F6-57B9-439F-BF00-902AFC0AE904}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2C6D421-8CA2-4138-A5E9-C34FD29CCE44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2C6D421-8CA2-4138-A5E9-C34FD29CCE44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2C6D421-8CA2-4138-A5E9-C34FD29CCE44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2C6D421-8CA2-4138-A5E9-C34FD29CCE44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B500A06-EEFA-4CEC-A33A-A498B4520BDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B500A06-EEFA-4CEC-A33A-A498B4520BDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B500A06-EEFA-4CEC-A33A-A498B4520BDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B500A06-EEFA-4CEC-A33A-A498B4520BDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEC946F1-1B67-4EB3-9897-01EAD6E326A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEC946F1-1B67-4EB3-9897-01EAD6E326A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEC946F1-1B67-4EB3-9897-01EAD6E326A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEC946F1-1B67-4EB3-9897-01EAD6E326A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB9C7AFD-EFA1-4756-BE33-38A5211A51C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB9C7AFD-EFA1-4756-BE33-38A5211A51C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB9C7AFD-EFA1-4756-BE33-38A5211A51C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB9C7AFD-EFA1-4756-BE33-38A5211A51C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DFE1E3B-0C8E-486A-BCC5-FA3D65404C79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DFE1E3B-0C8E-486A-BCC5-FA3D65404C79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DFE1E3B-0C8E-486A-BCC5-FA3D65404C79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DFE1E3B-0C8E-486A-BCC5-FA3D65404C79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{499D646C-B43B-46A3-8485-F43A75865571}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{499D646C-B43B-46A3-8485-F43A75865571}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{499D646C-B43B-46A3-8485-F43A75865571}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{499D646C-B43B-46A3-8485-F43A75865571}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28032FA7-0F45-433C-87C5-67EEDC5D223B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28032FA7-0F45-433C-87C5-67EEDC5D223B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28032FA7-0F45-433C-87C5-67EEDC5D223B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28032FA7-0F45-433C-87C5-67EEDC5D223B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B2C6D421-8CA2-4138-A5E9-C34FD29CCE44} = {4766AB6E-71A7-4398-8D1F-AAA951834001}
+		{1B500A06-EEFA-4CEC-A33A-A498B4520BDD} = {4766AB6E-71A7-4398-8D1F-AAA951834001}
+		{DEC946F1-1B67-4EB3-9897-01EAD6E326A9} = {4766AB6E-71A7-4398-8D1F-AAA951834001}
+		{EB9C7AFD-EFA1-4756-BE33-38A5211A51C7} = {4766AB6E-71A7-4398-8D1F-AAA951834001}
+		{3DFE1E3B-0C8E-486A-BCC5-FA3D65404C79} = {4766AB6E-71A7-4398-8D1F-AAA951834001}
+		{499D646C-B43B-46A3-8485-F43A75865571} = {E6E9F39A-3C64-43A5-82D3-68B12E1CF0EC}
+		{28032FA7-0F45-433C-87C5-67EEDC5D223B} = {E6E9F39A-3C64-43A5-82D3-68B12E1CF0EC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FF4B3820-4206-4316-82A5-DEA5792C6A71}
