@@ -1,0 +1,23 @@
+<Solution>
+  <Folder Name="/dist/">
+    <Project Path="src/dist-nuget/dist-nuget.csproj" />
+    <Project Path="src/dist-tests/dist-tests.csproj" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path=".gitattributes" />
+    <File Path=".github/workflows/Cogito.Extensions.Options.yml" />
+    <File Path=".gitignore" />
+    <File Path="appveyor.yml" />
+    <File Path="Cogito.Extensions.Options.dist.msbuildproj" />
+    <File Path="Directory.Build.props" />
+    <File Path="GitVersion.yml" />
+    <File Path="global.json" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/Cogito.Extensions.Options.Autofac/Cogito.Extensions.Options.Autofac.csproj" />
+    <Project Path="src/Cogito.Extensions.Options.Configuration.Autofac/Cogito.Extensions.Options.Configuration.Autofac.csproj" />
+    <Project Path="src/Cogito.Extensions.Options.Configuration/Cogito.Extensions.Options.Configuration.csproj" />
+    <Project Path="src/Cogito.Extensions.Options.Tests/Cogito.Extensions.Options.Tests.csproj" />
+    <Project Path="src/Cogito.Extensions.Options/Cogito.Extensions.Options.csproj" />
+  </Folder>
+</Solution>

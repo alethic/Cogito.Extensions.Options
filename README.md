@@ -2,13 +2,30 @@
 
 [![Build](https://github.com/alethic/Cogito.Extensions.Options/actions/workflows/Cogito.Extensions.Options.yml/badge.svg)](https://github.com/alethic/Cogito.Extensions.Options/actions/workflows/Cogito.Extensions.Options.yml)
 
-Various additions to Microsoft.Extensions.Options.
+Binds options types to configuration sections declaratively, and makes them resolvable from Autofac.
 
 ## Packages
 
-| Package | Version |
-| --- | --- |
-| [Cogito.Extensions.Options](https://www.nuget.org/packages/Cogito.Extensions.Options) | [![NuGet](https://img.shields.io/nuget/v/Cogito.Extensions.Options.svg)](https://www.nuget.org/packages/Cogito.Extensions.Options) |
-| [Cogito.Extensions.Options.Autofac](https://www.nuget.org/packages/Cogito.Extensions.Options.Autofac) | [![NuGet](https://img.shields.io/nuget/v/Cogito.Extensions.Options.Autofac.svg)](https://www.nuget.org/packages/Cogito.Extensions.Options.Autofac) |
-| [Cogito.Extensions.Options.Configuration](https://www.nuget.org/packages/Cogito.Extensions.Options.Configuration) | [![NuGet](https://img.shields.io/nuget/v/Cogito.Extensions.Options.Configuration.svg)](https://www.nuget.org/packages/Cogito.Extensions.Options.Configuration) |
-| [Cogito.Extensions.Options.Configuration.Autofac](https://www.nuget.org/packages/Cogito.Extensions.Options.Configuration.Autofac) | [![NuGet](https://img.shields.io/nuget/v/Cogito.Extensions.Options.Configuration.Autofac.svg)](https://www.nuget.org/packages/Cogito.Extensions.Options.Configuration.Autofac) |
+**[Cogito.Extensions.Options](https://www.nuget.org/packages/Cogito.Extensions.Options)** — Small additions to `Microsoft.Extensions.Options`.
+
+**[Cogito.Extensions.Options.Autofac](https://www.nuget.org/packages/Cogito.Extensions.Options.Autofac)** — Makes `IOptions<T>`, `IOptionsSnapshot<T>` and `IOptionsMonitor<T>` resolvable from an Autofac container.
+
+**[Cogito.Extensions.Options.Configuration](https://www.nuget.org/packages/Cogito.Extensions.Options.Configuration)** — Binds options types to configuration sections.
+
+**[Cogito.Extensions.Options.Configuration.Autofac](https://www.nuget.org/packages/Cogito.Extensions.Options.Configuration.Autofac)** — Declare on an options type which configuration section it binds to.
+
+Each package carries its own README with the detail; the links above go to nuget.org.
+
+## Building
+
+```shell
+dotnet restore Cogito.Extensions.Options.slnx
+dotnet msbuild -p:Configuration=Release Cogito.Extensions.Options.dist.msbuildproj
+```
+
+Packages are staged into `dist/nuget` and test suites into `dist/tests`; run a suite with
+`dotnet test -f <tfm> <path to its assembly>`.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
