@@ -19,7 +19,7 @@ Each package carries its own README with the detail; the links above go to nuget
 ## Building
 
 ```shell
-dotnet restore Cogito.Extensions.Options.sln
+dotnet restore Cogito.Extensions.Options.slnx
 dotnet msbuild -p:Configuration=Release Cogito.Extensions.Options.dist.msbuildproj
 ```
 
